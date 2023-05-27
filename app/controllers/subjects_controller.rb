@@ -8,8 +8,6 @@ class SubjectsController < ApplicationController
 
   # GET /subjects/1 or /subjects/1.json
   def show
-    @subject = Subject.find(params[:id])
-    @courses = @subject.courses.includes(:student)
   end
 
   # GET /subjects/new

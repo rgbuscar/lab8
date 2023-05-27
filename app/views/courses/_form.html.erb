@@ -12,13 +12,13 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :subject_id, style: "display: block" %>
-    <%= collection_select(:section, :subject_id, Subject.all, :id, :name) %>
+    <%= form.label :student_id, style: "display: block" %>
+    <%= collection_select(:course, :student_id, Student.all, :id, :name) %>
   </div>
 
-  <div class"=field">
-    <%= form.label :student_id, style: "display: block" %>
-    <%= collection_select(:section, :student_id, Student.all, :id, :name) %>
+  <div class="field">
+    <%= form.label :subject_id, style: "display: block" %>
+    <%= collection_select(:course, :subject_id, Subject.all, :id, :name) %>
   </div>
 
   <div>
