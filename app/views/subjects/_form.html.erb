@@ -26,11 +26,6 @@
     <%= form.number_field :number_of_units %>
   </div>
 
-  <div>
-    <%= form.label :attendance_list %>
-    <%= form.file_field :avatar %>
-  </div>
-
   <div class="field">
     <%= form.label :student_id %>
     <%= collection_select(:subject, :teacher_id, Student.all, :id, :name) %>

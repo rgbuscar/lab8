@@ -1,7 +1,7 @@
 <p style="color: green"><%= notice %></p>
 
 <%= render @student %>
-List of Students:
+<h2>List of Students:</h2>
 <table>
   <thead>
     <tr>
@@ -10,7 +10,6 @@ List of Students:
       <th>Teacher</th>
     </tr>
   </thead>
-
   <tbody>
     <%@student.subjects.each do |subject|%>
   <tr>
@@ -21,7 +20,7 @@ List of Students:
   <%end%>
   </tbody>
 </table>
-
+<p></p>
 <div>
   <%= link_to "Edit this student", edit_student_path(@student) %> |
   <%= link_to "Back to students", students_path %>
