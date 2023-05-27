@@ -1,17 +1,15 @@
 <div id="<%= dom_id student %>">
   <p>
     <strong>Name:</strong>
-    <%= student.name :avatar %>
+    <%= student.name %>
   </p>
 
   <p>
     <strong>Year level:</strong>
-    <%= student.year_level :avatar %>
+    <%= student.year_level%>
   </p>
-
-  <p>
-      <strong>Avatar:</strong>
-      <%= image_tag user.avatar %>
-  </p>
-
 </div>
+  <p>
+    <strong>Avatar:</strong>
+    <%= image_tag student.avatar %>
+  </p>
