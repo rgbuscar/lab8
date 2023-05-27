@@ -23,13 +23,16 @@
 
   <div>
     <%= form.label :number_of_units, style: "display: block" %>
-    <%= form.text_field :number_of_units %>
+    <%= form.number_field :number_of_units %>
   </div>
 
-  <div>
-    <%= form.label :teacher_id, style: "display: block" %>
-    <%= form.text_field :teacher_id %>
-  </div>
+  <div class="field">
+    <%= form.label :student_id %>
+    <%= collection_select(:subject, :teacher_id, Student.all, :id, :name) %>
+
+  <div class="field">
+      <%= form.label :teacher_id %>
+      <%= collection_select(:subject, :teacher_id, Teacher.all, :id, :name) %>
 
   <div>
     <%= form.submit %>

@@ -1,6 +1,24 @@
 <p style="color: green"><%= notice %></p>
 
 <%= render @subject %>
+List of Students:
+<table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Year Level</th>
+      </tr>
+    </thead>
+
+    <tbody>
+    <% @subject.students.each do |student| %>
+    <tr>
+      <td><%= student.name %></td>
+      <td><%= student.year_level %></td>
+
+    <% end %>
+    </tbody>
+</table>
 
 <div>
   <%= link_to "Edit this subject", edit_subject_path(@subject) %> |
